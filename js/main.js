@@ -10,3 +10,13 @@ $(window).bind('scroll', function() {
         $('nav .drop-menu ').css("background","#02082e");
     }
 });
+
+
+$('nav li').hover(
+    function() {
+        $('ul', this).stop().slideDown(200);
+    },
+    function() {
+        $('ul', this).stop().slideUp(200);
+    }
+    );

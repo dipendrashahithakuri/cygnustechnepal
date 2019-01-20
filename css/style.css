@@ -287,6 +287,7 @@ nav .menu {
 
 nav .menu li {
   padding: 10px 20px;
+  position: relative;
 }
 
 nav .menu li a {
@@ -298,8 +299,8 @@ nav .menu li a {
   font-weight: 400;
 }
 
-nav .menu li.active > a,
-nav .menu li a:hover {
+nav ul li.active > a,
+nav ul li a:hover {
   color: #ec0089;
 }
 
@@ -307,38 +308,30 @@ nav .dropper {
   position: relative;
 }
 
-nav .drop-menu {
-  margin-top: 25px;
-  min-width: 250px;
-  background: #02082e;
+nav ul li ul {
+  border-bottom: 5px solid #2ba0db;
+  display: none;
   position: absolute;
-  left: 0;
-  top: 180%;
-  overflow: hidden;
-  opacity: 0;
-  transition: .4s ease-in-out;
-  visibility: hidden;
-  height: auto;
-}
-
-nav .dropper:hover .drop-menu {
-  opacity: 1;
-  visibility: visible;
+  width: 280px;
   top: 100%;
+  left: 0;
+  min-height: 100px;
+  padding: 0;
 }
 
-nav .drop-menu li {
+
+
+nav ul li ul li {
   display: block !important;
   float: none !important;
-  text-align: center !important;
-  padding: 8px 16px;
-  border-bottom: 1px solid white;
+  text-align: left !important;
+  padding: 0;
 
 }
 
-nav .drop-menu li a {
+nav ul li ul li a {
   color: white;
-  font-size: 14px;
+  font-size: 8px;
 }
 
 .brand {
@@ -352,6 +345,10 @@ nav .drop-menu li a {
 }
 
 /*navigation end*/
+
+
+
+
 /*about section start*/
 .about-section {
   padding: 100px 0;
